@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/calculator.ts",
   "scripts": {
-    "test-tsc": "tsc --version",
-    "start": "npm run compile && node lib/calculator.js",
+    "lint": "eslint src/calculator.ts",
+    "start": "npm run lint && npm run compile && node lib/calculator.js",
     "compile": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,5 +14,10 @@
   "dependencies": {
     "@types/node": "^14.11.1",
     "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0"
   }
 }
