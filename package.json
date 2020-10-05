@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/src/main.js"
+    "start": "node server/src/main.js",
+    "install": "npm run install:server && npm run install:ui",
+    "install:server": "npm install --prefix server"
   },
   "author": "IT academy",
   "license": "ISC"
