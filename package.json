@@ -1,0 +1,11 @@
+{
+  "name": "lbs-to-kg",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/src/server.js"
+  },
+  "author": "IT academy",
+  "license": "ISC"
+}
