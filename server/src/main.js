@@ -10,8 +10,7 @@ app.use("/static", express.static(cssAndGifsFiles))
 
 app.get("/", (req, res) => {
   res.sendFile(uiHtmlPath);
-})
-
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
