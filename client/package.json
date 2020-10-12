@@ -4,12 +4,12 @@
   "description": "",
   "main": "src/calculator.ts",
   "scripts": {
-    "lint": "eslint src/app.ts",
+    "lint": "eslint src",
     "start": "npm run lint && npm run compile && node lib/calculator.js",
     "compile": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run lint && webpack --config webpack.dev.config.js",
-    "start:dev": "npm run lint --fix && webpack-dev-server --open --config webpack.dev.config.js"
+    "start:dev": "npm run lint -- --fix && webpack-dev-server --open --config webpack.dev.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "@types/react-dom": "^16.9.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "sass": "^1.27.0",
     "typescript": "^4.0.3"
   },
   "devDependencies": {
@@ -26,7 +27,12 @@
     "@typescript-eslint/parser": "^4.3.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.2.1",
+    "css-loader": "^4.3.0",
     "eslint": "^7.10.0",
+    "file-loader": "^6.1.1",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.3",
+    "style-loader": "^2.0.0",
     "ts-loader": "^8.0.4",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
