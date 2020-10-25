@@ -8,7 +8,7 @@
     "start": "npm run lint && npm run compile && node lib/calculator.js",
     "compile": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run lint && webpack --config webpack.dev.config.js",
+    "build": "webpack --config webpack.dev.config.js",
     "start:dev": "npm run lint -- --fix && webpack-dev-server --open --config webpack.dev.config.js"
   },
   "author": "",
