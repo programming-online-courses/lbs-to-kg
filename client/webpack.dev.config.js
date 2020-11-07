@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -8,12 +9,22 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.ts', ".js"],
   },
   module: {
     rules: [
       { test: /\.ts$/, loader: "ts-loader" },
     ],
   },
-
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        {from: 'public'}
+      ]
+    })
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port: 9002,
+  }
 }
